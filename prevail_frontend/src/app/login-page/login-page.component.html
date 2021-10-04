@@ -1,0 +1,30 @@
+<ng-container *ngIf='regKeyView'>
+  <div>
+    <label for="registration">Registration Key Value: </label>
+    <input type="text" #registration required id="registration">
+    <button (click)="checkRegKey(registration.value)">Validate</button>
+    <div *ngIf="regInvalid" class="alert">
+      Invalid Registration Key
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf='loginView'>
+  <div>
+    <label for="username">Username: </label>
+    <input type="text" #username required id="username">
+    <label for="password">Password: </label>
+    <input type="text" #password required id="password">
+    <div *ngIf="loginInvalid" class="alert">
+      Invalid username or password
+    </div>
+    <div *ngIf="registerInvalid" class="alert">
+      Username already exists
+    </div>
+    <div>
+      <button (click)="login(username.value, password.value)">Login</button>
+      <button (click)="register(username.value, password.value)">Register</button>
+    </div>
+
+  </div>
+</ng-container>

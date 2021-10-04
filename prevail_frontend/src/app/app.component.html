@@ -1,0 +1,8 @@
+<app-header></app-header>
+<ng-container *ngIf="login">
+  <app-login-page (loginSuccess)="userValidated($event)"></app-login-page>
+</ng-container>
+<ng-container *ngIf="missionLogs">
+  <app-mission-logs></app-mission-logs>
+</ng-container>
+

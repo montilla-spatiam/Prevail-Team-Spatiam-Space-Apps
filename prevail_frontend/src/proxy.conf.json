@@ -1,0 +1,14 @@
+{
+  "/api/*": {
+      "target": "http://44.193.83.129:8000",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+  },
+  "/register": {
+    "target": "http://44.193.83.129:8000",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

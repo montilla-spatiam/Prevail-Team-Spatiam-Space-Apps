@@ -1,0 +1,6 @@
+prevail_backend_NASA_spaceapps_2021/db.sqlite3
+prevail_backend_NASA_spaceapps_2021/notes_project/settings.py
+prevail_backend_NASA_spaceapps_2021/notes_project/__pycache__/*
+prevail_backend_NASA_spaceapps_2021/notes/__pycache__/*
+prevail_backend_NASA_spaceapps_2021/notes/migrations/*
+prevail_backend_NASA_spaceapps_2021/notes/cred.json

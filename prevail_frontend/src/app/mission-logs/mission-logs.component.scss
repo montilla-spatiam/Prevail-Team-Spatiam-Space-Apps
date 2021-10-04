@@ -1,0 +1,16 @@
+.log-container {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-rows: 0.4fr 1.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "menu-container entry-container"
+    "table-container entry-container";
+}
+
+.entry-container { grid-area: entry-container; }
+
+.menu-container { grid-area: menu-container; }
+
+.table-container { grid-area: table-container; }

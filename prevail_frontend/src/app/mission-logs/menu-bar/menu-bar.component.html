@@ -1,0 +1,49 @@
+<p>Search by</p>
+<div class="log-filter-container">
+  <div class="author-dropdown-container">
+    <mat-form-field appearance="fill" class="glass-bg">
+      <mat-label>Author</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let name of names" [value]="name.value">
+          {{name.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="role-dropdown-container">
+    <mat-form-field appearance="fill" class="glass-bg">
+      <mat-label>Role</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let role of roles" [value]="role.value">
+          {{role.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="date-dropdown-container">
+    <mat-form-field appearance="fill" class="glass-bg">
+      <mat-label>Enter a date range</mat-label>
+      <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+        <input matStartDate formControlName="start" placeholder="Start date">
+        <input matEndDate formControlName="end" placeholder="End date">
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+      <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+      <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="search-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Search</mat-label>
+      <mat-icon matSuffix><span class="material-icons-outlined">
+        search
+        </span></mat-icon>
+      <input matInput>
+    </mat-form-field>
+  </div>
+  <div class="timeline-toggle-container">
+    <mat-slide-toggle class="timeline-toggle-switch" [color]="color">{{switchView}}</mat-slide-toggle>
+  </div>
+  <div class="search-chips-container"></div>
+</div>
